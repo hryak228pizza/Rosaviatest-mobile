@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Rosaviatest_mobile.Views"
+             x:Class="Rosaviatest_mobile.Views.Test">
+
+    <StackLayout Margin="18,10">
+
+        <!--
+        <UserControl.Resources>
+            <Image x:Key="MyImage" Source.../>
+        </UserControl.Resources>
+            -->
+
+        <Label FontFamily="FiraSans" TextColor="#363642">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span FontSize="24" Text="Параметры тестирования" FontAttributes="Bold"/>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+
+        <Label/>
+
+        <Frame Padding="16">
+            <StackLayout>
+                
+                <StackLayout Orientation="Horizontal">
+                    <Button x:Name="Button1" Padding="4" HeightRequest="30" WidthRequest="90" Text="Простой тест" CornerRadius="5" FontFamily="FiraSans" FontSize="13" TextColor="Black" Clicked="Button1_Clicked" Margin="0,0,-5,0"/>
+                    <Button x:Name="Button2" Padding="4" HeightRequest="30" WidthRequest="90" Text="Тренировка" CornerRadius="5" FontFamily="FiraSans" FontSize="13" TextColor="Black" Clicked="Button2_Clicked" Margin="0,0,0,0"/>
+                </StackLayout>
+
+
+                <Label x:Name="labelTest" TextColor="#888C9B" FontFamily="FiraSans"/>
+
+                <StackLayout Orientation="Horizontal" Margin="-6,0,0,-12">
+                    <CheckBox x:Name="checkBox1" IsChecked="True"  Color="DarkGray" CheckedChanged="OnCheckBoxCheckedChanged1"/>
+                    <Label FontFamily="FiraSans" Margin="-5,0,0,0" TextColor="#363642" VerticalOptions="Center" Text="Перемешивать вопросы" FontSize="14"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="-6,0,0,-12">
+                    <CheckBox x:Name="checkBox2" Color="DarkGray" CheckedChanged="OnCheckBoxCheckedChanged2"/>
+                    <Label FontFamily="FiraSans" Margin="-5,0,0,0" TextColor="#363642" VerticalOptions="Center" Text="Перемешивать варианты ответов" FontSize="14"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="-6,0,0,-12">
+                    <CheckBox x:Name="checkBox3" Color="DarkGray" CheckedChanged="OnCheckBoxCheckedChanged3"/>
+                    <Label x:Name="Label3" FontFamily="FiraSans" Margin="-5,0,0,0" TextColor="#363642" VerticalOptions="Center" Text="Показать кнопку для подсказки" FontSize="14"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="-6,0,0,0">
+                    <CheckBox x:Name="checkBox4" Color="DarkGray" CheckedChanged="OnCheckBoxCheckedChanged4"/>
+                    <Label FontFamily="FiraSans" Margin="-5,0,0,0" TextColor="#363642" VerticalOptions="Center" Text="Показывать номер вопроса по Приказу" FontSize="14"/>
+                </StackLayout>
+            </StackLayout>
+        </Frame>
+
+        <Label/>
+
+
+        <StackLayout Orientation="Horizontal">
+
+            <Button Clicked="testStart_Clicked" ImageSource="check_W.png" Text="Начать тест" Padding="6,1" FontAttributes="Bold" BackgroundColor="#346CB0" TextColor="White" 
+                HeightRequest="36" WidthRequest="120" CornerRadius="5"/>
+        </StackLayout>
+
+
+
+        
+
+
+
+
+
+
+    </StackLayout>
+
+
+
+
+</ContentPage>

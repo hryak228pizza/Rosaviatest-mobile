@@ -1,0 +1,95 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <ProduceReferenceAssemblyInOutDir>true</ProduceReferenceAssemblyInOutDir>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Resources\drawable\**" />
+    <EmbeddedResource Remove="Resources\drawable\**" />
+    <None Remove="Resources\drawable\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Data\Descriptions.json" />
+    <None Remove="Data\q.txt" />
+    <None Remove="Fonts\BlinkMacSystemFont-Regular.otf" />
+    <None Remove="Fonts\BlinkMacSystemFont-Regular.ttf" />
+    <None Remove="Fonts\FiraSans-Bold.ttf" />
+    <None Remove="Fonts\FiraSans-Regular.ttf" />
+    <None Remove="Fonts\Lobster-Regular.ttf" />
+    <None Remove="paper-plane.png" />
+    <None Remove="Resources\Answers.txt" />
+    <None Remove="Resources\approved.txt" />
+    <None Remove="Resources\check.png" />
+    <None Remove="Resources\check_G.png" />
+    <None Remove="Resources\check_P.png" />
+    <None Remove="Resources\Descriptions.txt" />
+    <None Remove="Resources\Launch.png" />
+    <None Remove="Resources\paper-plane.png" />
+    <None Remove="Resources\Q&amp;A.txt" />
+    <None Remove="Resources\q.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\check_P.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\FiraSans-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\FiraSans-Regular.ttf" />
+    <EmbeddedResource Include="Resources\check.png" />
+    <EmbeddedResource Include="Resources\check_G.png" />
+    <EmbeddedResource Include="Resources\Launch.png" />
+    <EmbeddedResource Include="Resources\paper-plane.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.6" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2612" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ResultSlide.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\TestSlide.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\QuestionForm.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Bank.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Test.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Rosaviatest_mobile.Views.TestSlide">
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="FillAndExpand">
+            <StackLayout Margin="12,10">
+
+
+                <Label FontFamily="FiraSans" TextColor="#363642">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span FontSize="24" Text="Процесс тестирования" FontAttributes="Bold"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Label/>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label FontFamily="FiraSans" TextColor="#888C9B">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span FontSize="14" Text="Пройдено: " FontAttributes="Bold"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    <Label x:Name="progressLabel"/>
+                </StackLayout>
+                <ProgressBar x:Name="progressBar" ProgressColor="#00A28A"/>
+
+
+                <Label x:Name="questionNumber" FontSize="21" TextColor="#363642" FontFamily="FiraSans"/>
+
+                <!-- НЕ ВЕЗДЕ -->
+                <Label x:Name="stateQuestionNumber" FontSize="14" TextColor="#888C9B" FontFamily="FiraSans"/>
+
+                <Frame>
+                    <Label x:Name="questionText" FontSize="14" TextColor="#363642" FontFamily="FiraSans"/>
+                </Frame>
+
+                <StackLayout RadioButtonGroup.GroupName="answers">
+                    <RadioButton x:Name="Ans1" CheckedChanged="RadioButton_CheckedChanged1" FontSize="14" TextColor="#363642" FontFamily="FiraSans"/>
+                    <RadioButton x:Name="Ans2" CheckedChanged="RadioButton_CheckedChanged2" FontSize="14" TextColor="#363642" FontFamily="FiraSans"/>
+                    <RadioButton x:Name="Ans3" CheckedChanged="RadioButton_CheckedChanged3" FontSize="14" TextColor="#363642" FontFamily="FiraSans"/>
+                </StackLayout>
+
+                <Label/>
+                <StackLayout Orientation="Horizontal">
+                    <Label/>
+                    <Button Text="Далее →" x:Name="NextQBtn" Clicked="NextQuestion" FontSize="14" FontFamily="FiraSans" BackgroundColor="#346CB0" TextColor="White" Padding="3,6" WidthRequest="86" HeightRequest="36" CornerRadius="5"/>
+                    <Button Text="Показать ответ" x:Name="ShowAnsBtn" Clicked="ShowAnswer" FontSize="14" FontFamily="FiraSans" BackgroundColor="#F7C46C" TextColor="#363642" Padding="3,6" WidthRequest="172" HeightRequest="36" CornerRadius="5"/>
+                </StackLayout>
+                <Label/>
+
+
+
+
+
+
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>

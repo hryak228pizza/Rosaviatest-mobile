@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Rosaviatest_mobile.Views.ResultSlide">
+    
+    <ScrollView>
+
+        
+        <StackLayout Margin="12,10">
+            
+            
+            <Label Text="Результаты тестирования" FontFamily="FiraSansBold" FontSize="24" TextColor="#363642"/>
+
+            <Label/>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Результат по версии официального теста:" FontFamily="FiraSans" FontSize="14" TextColor="#0179A8"/>
+                <Label x:Name="Result" FontFamily="FiraSansBold" FontSize="14" TextColor="#0179A8"/>
+            </StackLayout>
+
+
+        </StackLayout>
+
+        
+
+
+
+
+
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Rosaviatest_mobile.Views"
+             x:Class="Rosaviatest_mobile.Views.MainPage">
+
+    <StackLayout BackgroundColor="#f6f7f9">
+
+        
+
+        <StackLayout Margin="15,05,20,20" Orientation="Horizontal">
+            <Image x:Name="paperPlane" HeightRequest="21" WidthRequest="20"/>
+            <Label Text="РОСАВИАТЕСТ" FontFamily="FiraSans" TextColor="#222230" FontSize="20"/>
+        </StackLayout>
+
+        <Label/>
+        <Label/>
+        <Label/>
+        <Label/>
+
+        <StackLayout Margin="10,10,20,20" Orientation="Vertical">
+            <Label Text="Взлёт по готовности!" FontFamily="FiraSans" TextColor="#363642" FontSize="28"/>
+            <Label Text="База вопросов, ответов и решений для самоподготовки к тестам Росавиации на получение свидетельства для авиационного персонала и диспетчеров управления воздушным движением." 
+               FontFamily="FiraSans" TextColor="#888c9b" FontSize="18" />
+        </StackLayout>
+
+        <StackLayout Margin="10" Orientation="Horizontal">
+            <Button Clicked="TestClick" Text="Пройти тест" BackgroundColor="#2b5a92" TextColor="White" 
+                HeightRequest="45" WidthRequest="145" CornerRadius="8"/>
+            <Button Clicked="BankClick" Text="База вопросов" BackgroundColor="#eff3f9" TextColor="#2e609c"
+                HeightRequest="45" WidthRequest="145" CornerRadius="8"/>
+        </StackLayout>
+
+        <Image x:Name="BGpic" HeightRequest="256" Margin="0,40,0,0" Scale="1.25"/>
+
+    </StackLayout>
+
+</ContentPage>

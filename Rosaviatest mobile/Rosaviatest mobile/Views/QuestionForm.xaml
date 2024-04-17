@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:Rosaviatest_mobile.Views"
+             x:Class="Rosaviatest_mobile.Views.QuestionForm">
+    
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout x:Name="mainStack" Margin="12,5">
+
+                <Label x:Name="questionLabel" FontFamily="FiraSansBold" FontSize="28" TextColor="#363642"/>
+                <Label/>
+
+                <StackLayout x:Name="typeContainer" Orientation="Horizontal">
+                    <Label FontSize="14" FontFamily="FiraSans" TextColor="#888C9B">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Правильность ответа:" />
+                                <Span Text="{Binding StatusText}" FontFamily="FiraSansBold" TextColor="White" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                </StackLayout>
+
+
+                <Label Margin="0,-5,0,5" FontSize="14" FontFamily="FiraSans" TextColor="#888C9B">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span x:Name="theme"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+
+                <StackLayout x:Name="questionTextContainer">
+                    <!-- Здесь будет текст вопроса -->
+                </StackLayout>
+
+                <Label/>
+
+                <StackLayout x:Name="answersContainer" >
+                    <!-- Здесь будут варианты ответов -->
+                </StackLayout>
+
+
+                <Grid RowSpacing="1" Margin="0, 5, 0, 0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30" />
+                        <!-- Ширина BoxView -->
+                        <ColumnDefinition Width="*" />
+                        <!-- Ширина оставшейся части -->
+                    </Grid.ColumnDefinitions>
+
+
+                    <AbsoluteLayout Grid.Row="0">
+                        <BoxView BackgroundColor="#DFF0D8" HeightRequest="30" WidthRequest="30"
+                            HorizontalOptions="Center" VerticalOptions="Center" />
+                        <Image x:Name="check_G" HeightRequest="16" WidthRequest="16"
+                            HorizontalOptions="Center" VerticalOptions="Center" Margin="7, 7, 7, 7" />
+                    </AbsoluteLayout>
+
+                    <Label Grid.Row="0" Grid.Column="1" Text=" - правильный и обоснованный вариант ответа"
+                        FontSize="14" FontFamily="FiraSans" TextColor="#888C9B"
+                        VerticalOptions="Center" />
+
+                    <AbsoluteLayout Grid.Row="1">
+                        <BoxView BackgroundColor="#E6E6FA" HeightRequest="30" WidthRequest="30"
+                            HorizontalOptions="Center" VerticalOptions="Center" />
+                        <Image x:Name="check_P" HeightRequest="16" WidthRequest="16"
+                            HorizontalOptions="Center" VerticalOptions="Center" Margin="7, 7, 7, 7"/>
+                    </AbsoluteLayout>
+
+
+                    <Label Grid.Row="1" Grid.Column="1" Text=" - вариант ответа, считающийся правильным в официальном тесте"
+                        FontSize="14" FontFamily="FiraSans" TextColor="#888C9B"
+                        VerticalOptions="Center" />
+                </Grid>
+
+                
+                
+
+            </StackLayout>
+            
+            
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
